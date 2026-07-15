@@ -1,0 +1,6 @@
+@ResearchTrackerApi_HostAddress = http://localhost:5274
+
+GET {{ResearchTrackerApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

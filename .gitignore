@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+
+# Local settings and secrets
+appsettings.Local.json
+appsettings.*.Local.json
+secrets.json
+
+# Publishing
+*.publishsettings
+*.pubxml.user
+
+# Logs
+logs/
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db

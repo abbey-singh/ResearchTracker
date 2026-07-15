@@ -23,16 +23,6 @@ builder.Services.AddScoped<IResearchProjectService, ResearchProjectService>();
 
 var app = builder.Build();
 
-var safeConnectionDetails =
-    new Microsoft.Data.SqlClient.SqlConnectionStringBuilder(connectionString);
-
-app.Logger.LogWarning(
-    "DATABASE CHECK: Server={Server}; Database={Database}",
-    safeConnectionDetails.DataSource,
-    safeConnectionDetails.InitialCatalog);
-
-app.Logger.LogWarning("TEST 3: ILogger executed");
-
 app.MapOpenApi();
 
 app.UseSwaggerUI(options =>

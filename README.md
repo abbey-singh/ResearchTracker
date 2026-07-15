@@ -54,6 +54,7 @@ SQL Server / Amazon RDS
 - `GET /health`
 
 <img width="929" height="408" alt="Command" src="https://github.com/user-attachments/assets/818cefc3-8315-43eb-b446-8a32d012e1a3" />
+
 ## Running Locally
 
 ### Prerequisites
@@ -74,10 +75,10 @@ SQL Server / Amazon RDS
    dotnet run
    ```
    
-4. Open Swagger using the local URL displayed in the terminal, for example:
+4. Open Swagger using the local URL and port displayed in the terminal, for example:
 
 ```text
-https://localhost:<port>/swagger
+https://localhost:5274/swagger
 ```
 
    <img width="670" height="343" alt="Database" src="https://github.com/user-attachments/assets/192b15fa-8af4-4ad0-9e4f-00164c2afdf5" />

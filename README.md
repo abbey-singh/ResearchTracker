@@ -26,6 +26,22 @@ A RESTful ASP.NET Core Web API for managing research projects.
 
 - <img width="744" height="242" alt="Application Environment" src="https://github.com/user-attachments/assets/7a0ad7d5-8c7e-48c3-a3fb-ec9910d974ec" />
 
+## Architecture
+
+Client / Swagger
+       |
+       v
+ASP.NET Core REST API
+       |
+       v
+Service Layer
+       |
+       v
+Entity Framework Core
+       |
+       v
+SQL Server / Amazon RDS
+
 ## API Endpoints
 
 - `GET /api/researchprojects`
@@ -46,5 +62,6 @@ A RESTful ASP.NET Core Web API for managing research projects.
 
    ```bash
    dotnet ef database update
+3. Open Swagger using the local URL shown in the terminal: https://localhost:<port>/swagger
 
    <img width="670" height="343" alt="Database" src="https://github.com/user-attachments/assets/192b15fa-8af4-4ad0-9e4f-00164c2afdf5" />

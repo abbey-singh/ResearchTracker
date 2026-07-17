@@ -1,9 +1,10 @@
-
 # Research Tracker
 
 A full-stack research project management application built with React, ASP.NET Core, Entity Framework Core, SQL Server, and AWS.
 
 The application allows users to create, view, edit, and delete research projects through a responsive React interface backed by a RESTful ASP.NET Core API.
+
+<img width="668" height="605" alt="Research Tracker Frontend" src="https://github.com/user-attachments/assets/71e9768c-8b84-44fb-997e-6751144b1e52" />
 
 ## Technologies
 

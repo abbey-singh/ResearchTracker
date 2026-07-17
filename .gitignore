@@ -1,27 +1,59 @@
+# ----------------------------
 # Visual Studio
+# ----------------------------
 .vs/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.ntvs*
+*.njsproj
+*.sw?
 
-# Build output
+# ----------------------------
+# .NET
+# ----------------------------
 bin/
 obj/
 
-# Local settings and secrets
+# Local settings
 appsettings.Local.json
 appsettings.*.Local.json
 secrets.json
 
-# Publishing
+# Publish
 *.publishsettings
 *.pubxml.user
 
+# ----------------------------
+# Node / React / Vite
+# ----------------------------
+node_modules/
+dist/
+dist-ssr/
+
+# Local environment files
+*.local
+.env
+.env.*
+
+# ----------------------------
 # Logs
+# ----------------------------
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
+# ----------------------------
 # Operating system
+# ----------------------------
 .DS_Store
 Thumbs.db

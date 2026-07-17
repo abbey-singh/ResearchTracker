@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f6fa;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+    button:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+.app {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+/* Header */
+
+header {
+    margin-bottom: 2rem;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 7vw, 4rem);
+    }
+
+    header p {
+        color: #64748b;
+    }
+
+.eyebrow {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Error message */
+
+.error {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-left: 4px solid #991b1b;
+    background: white;
+    color: #991b1b;
+}
+
+/* Form section */
+
+.create-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #dbe2ea;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
+}
+
+    .create-section h2 {
+        margin-top: 0;
+    }
+
+.project-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+    .project-form label {
+        display: grid;
+        gap: 0.4rem;
+        min-width: 0;
+        font-weight: 700;
+    }
+
+    .project-form input,
+    .project-form select,
+    .project-form textarea {
+        width: 100%;
+        min-width: 0;
+        padding: 0.75rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        background: white;
+        color: #1f2937;
+    }
+
+        .project-form input:focus,
+        .project-form select:focus,
+        .project-form textarea:focus {
+            outline: 2px solid #334155;
+            outline-offset: 2px;
+        }
+
+.description-field {
+    grid-column: 1 / -1;
+}
+
+    .description-field textarea {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100px;
+        resize: vertical;
+    }
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Shared buttons */
+
+.button,
+.project-form button,
+.edit-button,
+.delete-button,
+.cancel-button {
+    width: fit-content;
+    padding: 0.65rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+    .project-form button[type="submit"],
+    .primary-button {
+        border-color: #172033;
+        background: #172033;
+        color: white;
+    }
+
+        .project-form button[type="submit"]:hover:not(:disabled),
+        .primary-button:hover:not(:disabled) {
+            background: #25314a;
+        }
+
+.edit-button,
+.cancel-button,
+.secondary-button {
+    border-color: #cbd5e1;
+    background: white;
+    color: #1f2937;
+}
+
+    .edit-button:hover:not(:disabled),
+    .cancel-button:hover:not(:disabled),
+    .secondary-button:hover:not(:disabled) {
+        background: #f1f5f9;
+    }
+
+.delete-button,
+.danger-button {
+    border-color: #cbd5e1;
+    background: white;
+    color: #991b1b;
+}
+
+    .delete-button:hover:not(:disabled),
+    .danger-button:hover:not(:disabled) {
+        background: #fef2f2;
+    }
+
+/* Project cards */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.25rem;
+    background: white;
+    border: 1px solid #dbe2ea;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
+}
+
+    .project-card h2 {
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
+        overflow-wrap: anywhere;
+    }
+
+    .project-card p {
+        overflow-wrap: anywhere;
+    }
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.status {
+    margin: 0;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    display: grid;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Responsive layout */
+
+@media (max-width: 650px) {
+    .app {
+        width: min(100% - 1rem, 1100px);
+        padding: 1.5rem 0;
+    }
+
+    .project-form {
+        grid-template-columns: 1fr;
+    }
+
+    .description-field,
+    .form-actions {
+        grid-column: auto;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

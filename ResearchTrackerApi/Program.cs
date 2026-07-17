@@ -21,6 +21,17 @@ builder.Services.AddDbContext<ResearchTrackerDBContext>(options =>
 
 builder.Services.AddScoped<IResearchProjectService, ResearchProjectService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactClient", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 app.MapOpenApi();
@@ -31,6 +42,8 @@ app.UseSwaggerUI(options =>
         "/openapi/v1.json",
         "Research Tracker API v1");
 });
+
+app.UseCors("ReactClient");
 
 app.UseAuthorization();
 

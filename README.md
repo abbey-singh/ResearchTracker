@@ -78,6 +78,7 @@ SQL Server / Amazon RDS
 | Method | Endpoint | Description |
 |---|---|---|
 | GET | `/api/researchprojects` | Retrieve all projects |
+| GET | `/api/researchprojects/count` | Retrieve the total number of research projects |
 | GET | `/api/researchprojects/{id}` | Retrieve one project |
 | GET | `/api/researchprojects/status/{status}` | Filter by status |
 | GET | `/api/researchprojects/search?query=value` | Search projects |
